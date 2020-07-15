@@ -12,23 +12,27 @@ def botInfo():
     return("hello sandeep");
 
 
-@app.route('/')
+@app.route('/', methods=['GET','POST'])
 def index():
-    res = requests.get(api_url+api_key+'/getUpdates')
-    message = res.json()['result'][0]
-    chat_id,text = getMessage(message)
-    response = requests.post(api_url+api_key+"/sendMessage",json=sendMessage(chat_id))
-    #import pdb; pdb.set_trace()
-    return  response.json()
+    if request.method == 'POST':
+        message = request.get_json()
+        chat_id,text = getMessage(message)
+        response = requests.post(api_url+api_key+"/sendMessage",json=sendMessage(chat_id,"bla bla"))
+        return  response.json()
+    else:
+        return "hello"
 
-def sendMessage(chat_id):
-    query_string = {"text" :"Hello man","chat_id":chat_id}
+def sendMessage(chat_id,text_message):
+    query_string = {"text" :text_message,"chat_id":chat_id}
     return query_string
 
 def getMessage(message):
-    chat_id = message['message']['chat']['id'] 
+    chat_id = message['message']['chat']['id']
     text = message['message']['text']
     return chat_id,text
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
