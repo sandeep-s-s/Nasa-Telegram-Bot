@@ -14,7 +14,7 @@ This bot integrate some NASA apis to telegram client.
 ### Tech
 
 * [Python3] - HTML enhanced for web apps!
-* [Flask] - awesome web-based text editor
+* [Flask] - Python framework
 
 
 
