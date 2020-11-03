@@ -13,8 +13,8 @@ This bot integrate some NASA apis to telegram client.
 
 ### Tech
 
-* [Python3] - HTML enhanced for web apps!
-* [Flask] - Python framework
+* [Python3] - Programming language 
+* [Flask] - Python Framework
 
 
 
@@ -22,8 +22,8 @@ This bot integrate some NASA apis to telegram client.
 ### Installation
 
 * This app requires [python](https://www.python.org/) v3+ to run.
-* For running this  applicaton on localhost , we need a ngrok server assistance which make your localhost available online
-* we can set webhook using link https://api.telegram.org/botYour_Api_Key/setWebhook?url=https://your-url.com/
+* For running applicaton on localhost , it need a ngrok server assistance which make your localhost available online
+* Set webhook using link https://api.telegram.org/botYour_Api_Key/setWebhook?url=https://your-url.com/
 
 Install the dependencies and devDependencies and start the server.
 
