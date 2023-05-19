@@ -1,6 +1,5 @@
-# NASA telegram bot
+# NASA telegram bot [No-longer maintained]
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 This bot integrate some NASA apis to telegram client.
 
